@@ -1,23 +1,65 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Project 1 Wordle Game</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
-        <h1>Wordle Project</h1>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <script src="" async defer></script>
+        <h1>Wordle Game</h1>
+        <h3>How to play</h3>
+        <ul id="how-to-play">
+            <li>The aim of Wordle if to guess the correct five-letter word.</li>
+            <li>Use the keyboard to select your letters.</li>
+            <li>Click "Enter" to submit your word.</li>
+            <li>If your letter doesn't change color, that letter is not part of your word.</li>
+            <li>If your letter turns yellow, you have the correct letter but in the wrong position.</li>
+            <li>If your letter turns green, it's correct!</li>
+            <li>You have 6 attempts to find the correct word.</li>
+            <li>Let's play!</li>
+        </ul>
+
+
+        <div class="keyboard">
+           <div class="row" id="row-0">
+                <button class="key">Q</button>
+                <button class="key">W</button>
+                <button class="key">E</button>
+                <button class="key">R</button>
+                <button class="key">T</button>
+                <button class="key">Y</button>
+                <button class="key">U</button>
+                <button class="key">I</button>
+                <button class="key">O</button>
+                <button class="key">P</button>
+            </div>
+            <div class="row" id="row-1">
+                <button class="key">A</button>
+                <button class="key">S</button>
+                <button class="key">D</button>
+                <button class="key">F</button>
+                <button class="key">G</button>
+                <button class="key">H</button>
+                <button class="key">J</button>
+                <button class="key">K</button>
+                <button class="key">L</button>
+            </div>
+            <div class="row" id="row-2">
+                <button class="key-delete">DEL</button>
+                <button class="key">Z</button>
+                <button class="key">X</button>
+                <button class="key">C</button>
+                <button class="key">V</button>
+                <button class="key">B</button>
+                <button class="key">N</button>
+                <button class="key">M</button>
+                <button class="key-enter">ENTER</button>
+            </div>
+
+        <script src="./script.js" async defer></script>
     </body>
 </html>
+
