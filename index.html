@@ -9,160 +9,111 @@
         <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
-        <h1>Wordle Game</h1>
-        <h3>How to play</h3>
-        <ul id="how-to-play">
-            <li>The aim of Wordle if to guess the correct five-letter word.</li>
-            <li>Use the keyboard to select your letters.</li>
-            <li>Click "Enter" to submit your word.</li>
-            <li>If your letter doesn't change color, that letter is not part of your word.</li>
-            <li>If your letter turns yellow, you have the correct letter but in the wrong position.</li>
-            <li>If your letter turns green, it's correct!</li>
-            <li>You have 6 attempts to find the correct word.</li>
-            <li>Let's play!</li>
-        </ul><br><br>
+        
+        <div class="full-page">
+            <div class="title">
+                <h1 >Wordle Game</h1>
+            </div>
+            <div id="how-to-play">
+                <h3>How to play</h3>
+                <ul>
+                <li>The aim of Wordle if to guess the correct five-letter word.</li>
+                <li>Use the keyboard to select your letters.</li>
+                <li>Click "Enter" to submit your word.</li>
+                <li>If your letter doesn't change color, that letter is not part of your word.</li>
+                <li>If your letter turns yellow, you have the correct letter but in the wrong position.</li>
+                <li>If your letter turns green, it's correct!</li>
+                <li>You have 6 attempts to find the correct word.</li>
+                <li>Let's play!</li>
+                </ul>
+            </div>
 
-        <div class="game-container">
-            <div class="word-row">
-                <div class="square">
-                    <input type="text" class="square-input">
+            <div class="input-container">
+                <div class="inputRow" id="inputRow-0">
+                    <div class="square" id="inputRow-0-square-0"></div>
+                    <div class="square" id="inputRow-0-square-1"></div>
+                    <div class="square" id="inputRow-0-square-2"></div>
+                    <div class="square" id="inputRow-0-square-3"></div>
+                    <div class="square" id="inputRow-0-square-4"></div>
                 </div>
-                <div class="square">
-                    <input type="text" class="square-input">
+                <div class="inputRow" id="inputRow-1">
+                    <div class="square" id="inputRow-1-square-0"></div>
+                    <div class="square" id="inputRow-1-square-1"></div>
+                    <div class="square" id="inputRow-1-square-2"></div>
+                    <div class="square" id="inputRow-1-square-3"></div>
+                    <div class="square" id="inputRow-1-square-4"></div>
                 </div>
-                <div class="square">
-                    <input type="text" class="square-input">
+                <div class="inputRow" id="inputRow-2">
+                    <div class="square" id="inputRow-2-square-0"></div>
+                    <div class="square" id="inputRow-2-square-1"></div>
+                    <div class="square" id="inputRow-2-square-2"></div>
+                    <div class="square" id="inputRow-2-square-3"></div>
+                    <div class="square" id="inputRow-2-square-4"></div>
                 </div>
-                <div class="square">
-                    <input type="text" class="square-input">
+                <div class="inputRow" id="inputRow-3">
+                    <div class="square" id="inputRow-3-square-0"></div>
+                    <div class="square" id="inputRow-3-square-1"></div>
+                    <div class="square" id="inputRow-3-square-2"></div>
+                    <div class="square" id="inputRow-3-square-3"></div>
+                    <div class="square" id="inputRow-3-square-4"></div>
                 </div>
-                <div class="square">
-                    <input type="text" class="square-input">
+                <div class="inputRow" id="inputRow-4">
+                    <div class="square" id="inputRow-4-square-0"></div>
+                    <div class="square" id="inputRow-4-square-1"></div>
+                    <div class="square" id="inputRow-4-square-2"></div>
+                    <div class="square" id="inputRow-4-square-3"></div>
+                    <div class="square" id="inputRow-4-square-4"></div>
                 </div>
-            </div>
-            <div class="word-row">
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-            </div>
-            <div class="word-row">
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-                <div class="square">
-                    <input type="text" class="square-input">
+                <div class="inputRow" id="inputRow-5">
+                    <div class="square" id="inputRow-5-square-0"></div>
+                    <div class="square" id="inputRow-5-square-1"></div>
+                    <div class="square" id="inputRow-5-square-2"></div>
+                    <div class="square" id="inputRow-5-square-3"></div>
+                    <div class="square" id="inputRow-5-square-4"></div>
                 </div>
             </div>
-            <div class="word-row">
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
+                
+
+            <div class="keyboard-container">
+                <div class="keyboardRow" id="keyboardRow-0">
+                     <button class="key">Q</button>
+                     <button class="key">W</button>
+                     <button class="key">E</button>
+                     <button class="key">R</button>
+                     <button class="key">T</button>
+                     <button class="key">Y</button>
+                     <button class="key">U</button>
+                     <button class="key">I</button>
+                     <button class="key">O</button>
+                     <button class="key">P</button>
+                 </div>
+                 <div class="keyboardRow" id="keyboardRow-1">
+                     <button class="key">A</button>
+                     <button class="key">S</button>
+                     <button class="key">D</button>
+                     <button class="key">F</button>
+                     <button class="key">G</button>
+                     <button class="key">H</button>
+                     <button class="key">J</button>
+                     <button class="key">K</button>
+                     <button class="key">L</button>
+                 </div>
+                 <div class="keyboardRow" id="keyboardRow-2">
+                     <button class="key" id="key-delete">DEL</button>
+                     <button class="key">Z</button>
+                     <button class="key">X</button>
+                     <button class="key">C</button>
+                     <button class="key">V</button>
+                     <button class="key">B</button>
+                     <button class="key">N</button>
+                     <button class="key">M</button>
+                     <button class="key" id="key-enter">ENTER</button>
+                 </div>
             </div>
-            <div class="word-row">
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-            </div>
-            <div class="word-row">
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-                <div class="square">
-                    <input type="text" class="square-input">
-                </div>
-            </div>
-        </div><br>
+    </div>
         
 
-        <div class="keyboard">
-           <div class="row" id="row-0">
-                <button class="key">Q</button>
-                <button class="key">W</button>
-                <button class="key">E</button>
-                <button class="key">R</button>
-                <button class="key">T</button>
-                <button class="key">Y</button>
-                <button class="key">U</button>
-                <button class="key">I</button>
-                <button class="key">O</button>
-                <button class="key">P</button>
-            </div>
-            <div class="row" id="row-1">
-                <button class="key">A</button>
-                <button class="key">S</button>
-                <button class="key">D</button>
-                <button class="key">F</button>
-                <button class="key">G</button>
-                <button class="key">H</button>
-                <button class="key">J</button>
-                <button class="key">K</button>
-                <button class="key">L</button>
-            </div>
-            <div class="row" id="row-2">
-                <button class="key-delete">DEL</button>
-                <button class="key">Z</button>
-                <button class="key">X</button>
-                <button class="key">C</button>
-                <button class="key">V</button>
-                <button class="key">B</button>
-                <button class="key">N</button>
-                <button class="key">M</button>
-                <button class="key-enter">ENTER</button>
-            </div>
+       
 
         <script src="./script.js" async defer></script>
     </body>
