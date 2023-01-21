@@ -32,27 +32,32 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    font-size: 50px;
 }
 
 .keyboardRow{
-   margin: 5px;
+   margin: 1px;
+   
 }
 
 .keyboardRow button{
     border-radius: 5px;
-    margin: 2px;
+    margin: 1px;
     width: 30px;
     height: 30px;
+    font-size: 20px;
 } 
 #key-delete{
     width: 40px;
     height: 30px;
+    font-size: 13px;
+ 
 }
 
 #key-enter{
     width: 60px;
     height: 30px;
+    font-size: 13px;
 } 
 
 

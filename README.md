@@ -6,3 +6,10 @@ Steps:
 1 - create HTML with the basic structure of the game
 2 - create JS to randomly get the words and check player inputs (score too?)
 3 - create CSS to style the page
+
+Today:
+
+Make buttons work properly, add function for delete, enter. 
+
+Add different colors when letter is correct
+
