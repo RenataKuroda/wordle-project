@@ -57,26 +57,30 @@ function checkInput(){
     const input = inputWord[startRow].join('');
     
     if (startSquare > 4){
-        console.log('input is ' + input + ', wordle is ' + wordle)
+    //     console.log('input is ' + input + ', wordle is ' + wordle)
         changeColor()
-        if (input === wordle){
-        // alert('Congratulations, you won!')
-        } else {
-            if (startRow <= 5){
-                startRow++
-                startSquare = 0
-            } if (startRow > 5){
-            // alert('Game Over!')
-            }
+    if (input === wordle){
+        setTimeout(() => {
+            alert('Congratulations, you won!');
+        }, 3000)        
+    } else {
+        if (startRow <= 5){
+            startRow++
+            startSquare = 0
+        } if (startRow > 5){
+            setTimeout(() => {
+                alert('Game Over!')
+            }, 3000)
         }
     }
+}
 }
 
 
 
 function changeColor(){
     const rowSquares = document.querySelector('#inputRow-' + startRow).children;
-    console.log(rowSquares)
+    // console.log(rowSquares)
     for(let i = 0; i < rowSquares.length; i++){
         const square = rowSquares[i];    
         console.log(square)
