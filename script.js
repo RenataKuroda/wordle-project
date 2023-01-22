@@ -2,25 +2,32 @@ const words = ["aback","abase","abate","abbey","abbot","abhor","abide","abled","
 // const wordle = words[Math.floor(Math.random()*words.length)];
 const wordle = 'START'
 
-let inputWord = [[]];
+const inputWord = [
+   ['', '', '', '', ''],
+   ['', '', '', '', ''],
+   ['', '', '', '', ''],
+   ['', '', '', '', ''],
+   ['', '', '', '', ''],
+   ['', '', '', '', ''],
+] 
 let inputWordCount = 0;
 
 let startRow = 0;
 let startSquare = 0;
 
-// const inputDisplay = document.querySelector('.input-container');
 const keyboard = document.querySelector('.keyboard-container');
-// const inputRow = document.querySelector('.inputRow');
 const deleteKey = document.querySelector('#key-delete');
-const enterKey = document.getElementById('#key-enter');
+const enterKey = document.querySelector('#key-enter');
 
 
 
 function buttonClickHandler(event) {
     // console.log('clicked', event.target.textContent)
     if (event.target == deleteKey) {
-        // console.log('delete')
         deleteLetter()
+    } else if (event.target == enterKey) {
+        checkInput()
+        console.log('enter')
     } else{
     addLetter(event.target.textContent)
     }
@@ -31,18 +38,28 @@ keyboard.addEventListener('click', buttonClickHandler)
 function addLetter(letter){
     const square = document.getElementById('inputRow-' + startRow +'-square-' + startSquare)
     square.textContent = letter
+    inputWord[startRow][startSquare] = letter
     startSquare++
+    console.log(inputWord)
 }
 
 function deleteLetter(){
     startSquare--;
-    console.log(startSquare)
+
     const square = document.getElementById('inputRow-' + startRow +'-square-' + startSquare);
     square.textContent = '';
 }
 
-function checkRow(){
-    if (startSquare === 5){
-
+function checkInput(){
+    const input = inputWord[startRow].join('');
+    
+    if (startSquare > 4){
+        
+        if (input === wordle){
+        alert('Congratulations, you won!')
+        }
+    } if (startRow < 5){
+        startRow++
+        startSquare = 0
     }
 }
