@@ -60,13 +60,13 @@ function checkInput(){
         console.log('input is ' + input + ', wordle is ' + wordle)
         changeColor()
         if (input === wordle){
-        alert('Congratulations, you won!')
+        // alert('Congratulations, you won!')
         } else {
             if (startRow <= 5){
                 startRow++
                 startSquare = 0
             } if (startRow > 5){
-            alert('Game Over!')
+            // alert('Game Over!')
             }
         }
     }
@@ -81,29 +81,17 @@ function changeColor(){
         const square = rowSquares[i];    
         console.log(square)
         const letter = square.textContent;
-        if (letter == wordle[i]){
-            square.classList.add('green-overlay');
-        } else if (wordle.includes(letter)) {
-            square.classList.add('yellow-overlay');
-        } else {
-            square.classList.add('grey-overlay');
-        }
+
+        setTimeout(() => {
+            square.classList.add('flip')
+            if (letter == wordle[i]){
+                square.classList.add('green-overlay');
+            } else if (wordle.includes(letter)) {
+                square.classList.add('yellow-overlay');
+            } else {
+                square.classList.add('grey-overlay');
+            }
+        }, 500 * i)
     }
 }
 
-    // for(let i = 0; i <= startSquare; i++) {
-    //     let square = document.getElementById('inputRow-' + startRow + '-square-' + i);
-    //     input += square.textContent;
-    //     }
-    // compareInput(input);
-    // }
-    
-
-
-// function compareInput(input) {
-//     if (input.toLowerCase() === wordle.toLowerCase()) {
-//         console.log("The input matches the wordle!");
-//     } else {
-//         console.log("The input does not match the wordle.");
-//     }
-// }

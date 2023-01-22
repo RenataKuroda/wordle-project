@@ -60,8 +60,24 @@ body{
     font-size: 13px;
 } 
 
+.square.flip{
+    animation: 1s linear flipping;
+}
+
+@keyframes flipping{
+    0%{
+        transform: rotateX(0deg);
+    }
+    50%{
+        transform: rotateX(90deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+
 .grey-overlay{
-    background-color:rgb(113, 106, 119) !important;
+    background-color:rgb(168, 157, 177) !important;
 }
 .yellow-overlay{
     background-color: rgb(233, 233, 118) !important;
