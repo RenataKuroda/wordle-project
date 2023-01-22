@@ -24,10 +24,12 @@ const enterKey = document.querySelector('#key-enter');
 function buttonClickHandler(event) {
     // console.log('clicked', event.target.textContent)
     if (event.target == deleteKey) {
+        // console.log('delete')
         deleteLetter()
     } else if (event.target == enterKey) {
         checkInput()
-        console.log('enter')
+        // console.log('enter')
+        // checkRow()
     } else{
     addLetter(event.target.textContent)
     }
@@ -39,13 +41,14 @@ function addLetter(letter){
     const square = document.getElementById('inputRow-' + startRow +'-square-' + startSquare)
     square.textContent = letter
     inputWord[startRow][startSquare] = letter
+    // square.setAttribute('data', letter)
     startSquare++
     console.log(inputWord)
 }
 
 function deleteLetter(){
     startSquare--;
-
+    // console.log(startSquare)
     const square = document.getElementById('inputRow-' + startRow +'-square-' + startSquare);
     square.textContent = '';
 }
@@ -54,12 +57,53 @@ function checkInput(){
     const input = inputWord[startRow].join('');
     
     if (startSquare > 4){
-        
+        console.log('input is ' + input + ', wordle is ' + wordle)
+        changeColor()
         if (input === wordle){
         alert('Congratulations, you won!')
+        } else {
+            if (startRow <= 5){
+                startRow++
+                startSquare = 0
+            } if (startRow > 5){
+            alert('Game Over!')
+            }
         }
-    } if (startRow < 5){
-        startRow++
-        startSquare = 0
     }
 }
+
+
+
+function changeColor(){
+    const rowSquares = document.querySelector('#inputRow-' + startRow).children;
+    console.log(rowSquares)
+    for(let i = 0; i < rowSquares.length; i++){
+        const square = rowSquares[i];    
+        console.log(square)
+        const letter = square.textContent;
+        if (letter == wordle[i]){
+            square.classList.add('green-overlay');
+        } else if (wordle.includes(letter)) {
+            square.classList.add('yellow-overlay');
+        } else {
+            square.classList.add('grey-overlay');
+        }
+    }
+}
+
+    // for(let i = 0; i <= startSquare; i++) {
+    //     let square = document.getElementById('inputRow-' + startRow + '-square-' + i);
+    //     input += square.textContent;
+    //     }
+    // compareInput(input);
+    // }
+    
+
+
+// function compareInput(input) {
+//     if (input.toLowerCase() === wordle.toLowerCase()) {
+//         console.log("The input matches the wordle!");
+//     } else {
+//         console.log("The input does not match the wordle.");
+//     }
+// }

@@ -60,6 +60,15 @@ body{
     font-size: 13px;
 } 
 
+.grey-overlay{
+    background-color:rgb(113, 106, 119) !important;
+}
+.yellow-overlay{
+    background-color: rgb(233, 233, 118) !important;
+}
+.green-overlay{
+    background-color: rgb(156, 202, 156) !important;
+}
 
 
 
