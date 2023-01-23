@@ -68,7 +68,9 @@ function checkInput(){
         let winningSoundEffect = document.querySelector('.winning');
         winningSoundEffect.play();
         setTimeout(() => {
-            alert('Congratulations, you won!');
+            console.log('showWinMessage function called')
+            showWinMessage()
+            
             
         }, 3000)        
     } else {
@@ -79,7 +81,8 @@ function checkInput(){
             setTimeout(() => {
                 let gameOverSoundEffect = document.querySelector('.gameover');
         gameOverSoundEffect.play();
-                alert('Game Over!')
+            showGameOverMessage()
+                // alert('Game Over!')
             }, 3000)
         }
     }
@@ -115,3 +118,11 @@ function changeKeyboardColor(keyLetter, color){
     key.classList.add(color)
 }
 
+function showWinMessage(){
+    const winWindow = document.querySelector('#win-message');
+    winWindow.style.display = 'block';
+}
+function showGameOverMessage(){
+    const gameOverWindow = document.querySelector('#gameover-message');
+    gameOverWindow.style.display = 'block';
+}
