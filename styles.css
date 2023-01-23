@@ -60,6 +60,7 @@ body{
     font-size: 13px;
 } 
 
+
 .square.flip{
     animation: 1s linear flipping;
 }
