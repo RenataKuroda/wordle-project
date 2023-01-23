@@ -17,5 +17,7 @@ Steps:
 2 - create JS to randomly get the words and check player inputs (score too?)
 3 - create CSS to style the page
 
+Sound Effects downloaded from https://pixabay.com/
+
 
 
