@@ -21,4 +21,6 @@ Sound Effects downloaded from https://pixabay.com/
 
 
 I want to create a function to let the player know if the word is smaller than 5 letters
+Create a button to restart/play again
+
 

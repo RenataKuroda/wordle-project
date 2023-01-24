@@ -41,7 +41,24 @@ for (const key of keys){
     key.addEventListener('click', buttonClickHandler)
 }
 
+function keyHandler(key){
+    if (key === 'KEY-DELETE' || key === 'BACKSPACE'){
+        deleteLetter();
+    } else if (key === 'KEY-ENTER' || key === 'ENTER'){
+        checkInput();
+    } else {
+        addLetter(key);
+    }
+}
+function buttonClickHandler(event) {
+    keyHandler(event.srcElement.id.toUpperCase());
+}
 
+document.querySelector('body').onload = () => {
+    window.onkeydown = (event) => {
+        keyHandler(event.key.toUpperCase());
+    }
+}
 
 function addLetter(letter){
     const square = document.getElementById('inputRow-' + startRow +'-square-' + startSquare)
@@ -70,9 +87,7 @@ function checkInput(){
         setTimeout(() => {
             console.log('showWinMessage function called')
             showWinMessage()
-            
-            
-        }, 3000)        
+            }, 3000)        
     } else {
         if (startRow <= 5){
             startRow++
@@ -126,3 +141,4 @@ function showGameOverMessage(){
     const gameOverWindow = document.querySelector('#gameover-message');
     gameOverWindow.style.display = 'block';
 }
+
