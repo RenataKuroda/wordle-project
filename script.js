@@ -15,8 +15,6 @@ let inputWordCount = 0;
 let startRow = 0;
 let startSquare = 0;
 
-
-
 const keyboard = document.querySelector('.keyboard-container');
 const keys = document.querySelectorAll('.key');
 const deleteKey = document.querySelector('#key-delete');
@@ -37,6 +35,7 @@ function buttonClickHandler(event) {
     }
 
 }
+
 for (const key of keys){
     key.addEventListener('click', buttonClickHandler)
 }
@@ -114,7 +113,7 @@ function checkInput(){
             }
         }
     } else {
-        alert('invalid word')
+        alert('Invalid Word')
     }
 }
 
@@ -157,8 +156,23 @@ function showGameOverMessage(){
     const gameOverWindow = document.querySelector('#gameover-message');
     gameOverWindow.style.display = 'block';
 }
-// function showInvalidWordMessage(){
-//     const invalidWordWindow = document.querySelector('#invalid-word-message');
-//     invalidWordWindow.style.display = 'block';
-// }
+function showInvalidWordMessage(){
+    const invalidWordWindow = document.querySelector('#invalid-word-message');
+    invalidWordWindow.style.display = 'block';
+}
+// function showAlert(title, message) {
+//     var alertContainer = document.getElementById("alert-container");
+//     var alert = document.getElementById("alert");
+//     var alertTitle = document.getElementById("alert-title");
+//     var alertMessage = document.getElementById("alert-message");
+//     var okButton = document.getElementById("alert-ok-button");
 
+//     alertTitle.innerHTML = "Invalid Word";
+//     alertMessage.innerHTML = "please type an existing word";
+
+//     alertContainer.appendChild(alert);
+
+//     okButton.addEventListener("click", function() {
+//         alertContainer.removeChild(alert);
+//     });
+// }
