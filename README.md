@@ -24,3 +24,7 @@ I want to create a function to let the player know if the word is smaller than 5
 Create a button to restart/play again
 
 
+https://css3buttongenerator.com/
+used this to get the keyboard customisation
+
+

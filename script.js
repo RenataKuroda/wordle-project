@@ -21,7 +21,7 @@ const keyboard = document.querySelector('.keyboard-container');
 const keys = document.querySelectorAll('.key');
 const deleteKey = document.querySelector('#key-delete');
 const enterKey = document.querySelector('#key-enter');
-const resetButton = document.querySelector('.reset-button');
+// const resetButton = document.querySelector('.reset-button');
 
 function buttonClickHandler(event) {
     // console.log('clicked', event.target.textContent)
@@ -82,10 +82,11 @@ function checkInput(){
     //     console.log('input is ' + input + ', wordle is ' + wordle)
         changeColor()
     if (input === wordle){
-        let winningSoundEffect = document.querySelector('.winning');
-        winningSoundEffect.play();
+        
         setTimeout(() => {
-            console.log('showWinMessage function called')
+            // console.log('showWinMessage function called')
+            let winningSoundEffect = document.querySelector('.winning');
+        winningSoundEffect.play();
             showWinMessage()
             }, 3000)        
     } else {
