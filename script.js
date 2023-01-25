@@ -21,7 +21,7 @@ const keyboard = document.querySelector('.keyboard-container');
 const keys = document.querySelectorAll('.key');
 const deleteKey = document.querySelector('#key-delete');
 const enterKey = document.querySelector('#key-enter');
-// const resetButton = document.querySelector('.reset-button');
+const resetButton = document.querySelector('.reset-button');
 
 function buttonClickHandler(event) {
     // console.log('clicked', event.target.textContent)
@@ -77,33 +77,40 @@ function deleteLetter(){
 
 function checkInput(){
     const input = inputWord[startRow].join('');
-    
-    if (startSquare > 4){
-    //     console.log('input is ' + input + ', wordle is ' + wordle)
-        changeColor()
-    if (input === wordle){
-        
-        setTimeout(() => {
-            // console.log('showWinMessage function called')
-            let winningSoundEffect = document.querySelector('.winning');
-        winningSoundEffect.play();
-            showWinMessage()
-            }, 3000)        
-    } else {
-        if (startRow <= 5){
-            startRow++
-            startSquare = 0
-        } if (startRow > 5){
-            setTimeout(() => {
-                let gameOverSoundEffect = document.querySelector('.gameover');
-        gameOverSoundEffect.play();
-            showGameOverMessage()
-                // alert('Game Over!')
-            }, 3000)
+    console.log(input)
+    if (words.includes(input.toLowerCase())){
+        console.log('teta1')
+        if (startSquare > 4){
+            console.log('input is ' + input + ', wordle is ' + wordle)
+            changeColor()
+            if (input === wordle){
+                    
+                setTimeout(() => {
+                    console.log('showWinMessage function called')
+                    let winningSoundEffect = document.querySelector('.winning');
+                    winningSoundEffect.play();
+                    showWinMessage()
+                }, 3000)        
+            } else {
+                if (startRow <= 5){
+                    startRow++
+                    startSquare = 0
+                } if (startRow > 5){
+                    setTimeout(() => {
+                        let gameOverSoundEffect = document.querySelector('.gameover');
+                        gameOverSoundEffect.play();
+                        showGameOverMessage()
+                        // alert('Game Over!')
+                    }, 3000)
+                }
+            }
         }
+    } else {
+        console.log('invalid word')
     }
 }
-}
+
+
 
 function changeColor(){
     const rowSquares = document.querySelector('#inputRow-' + startRow).children;
@@ -142,4 +149,8 @@ function showGameOverMessage(){
     const gameOverWindow = document.querySelector('#gameover-message');
     gameOverWindow.style.display = 'block';
 }
+// function showInvalidWordMessage(){
+//     const invalidWordWindow = document.querySelector('#invalid-word-message');
+//     invalidWordWindow.style.display = 'block';
+// }
 
