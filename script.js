@@ -33,7 +33,7 @@ function buttonClickHandler(event) {
         // console.log('enter')
         // checkRow()
     } else{
-    addLetter(event.target.textContent)
+        addLetter(event.target.textContent)
     }
 
 }
@@ -42,14 +42,19 @@ for (const key of keys){
 }
 
 function keyHandler(key){
+    const validyKeys = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+
     if (key === 'KEY-DELETE' || key === 'BACKSPACE'){
         deleteLetter();
     } else if (key === 'KEY-ENTER' || key === 'ENTER'){
         checkInput();
-    } else {
+    } else if (validyKeys.indexOf(key) > -1) {
         addLetter(key);
+    } else {
+        console.log('invalid key')
     }
 }
+
 function buttonClickHandler(event) {
     keyHandler(event.srcElement.id.toUpperCase());
 }
@@ -62,6 +67,9 @@ document.querySelector('body').onload = () => {
 
 function addLetter(letter){
     const square = document.getElementById('inputRow-' + startRow +'-square-' + startSquare)
+    if (inputWord[startRow].join('').length >= 5) {
+        return;
+    }
     square.textContent = letter
     inputWord[startRow][startSquare] = letter
     startSquare++
@@ -72,6 +80,7 @@ function deleteLetter(){
     startSquare--;
     // console.log(startSquare)
     const square = document.getElementById('inputRow-' + startRow +'-square-' + startSquare);
+    inputWord[startRow][startSquare] = ''
     square.textContent = '';
 }
 
@@ -79,9 +88,8 @@ function checkInput(){
     const input = inputWord[startRow].join('');
     console.log(input)
     if (words.includes(input.toLowerCase())){
-        console.log('teta1')
         if (startSquare > 4){
-            console.log('input is ' + input + ', wordle is ' + wordle)
+            // console.log('input is ' + input + ', wordle is ' + wordle)
             changeColor()
             if (input === wordle){
                     
@@ -106,7 +114,7 @@ function checkInput(){
             }
         }
     } else {
-        console.log('invalid word')
+        alert('invalid word')
     }
 }
 
