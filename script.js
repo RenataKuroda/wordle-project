@@ -20,6 +20,9 @@ const keys = document.querySelectorAll('.key');
 const deleteKey = document.querySelector('#key-delete');
 const enterKey = document.querySelector('#key-enter');
 const resetButton = document.querySelector('.reset-button');
+document.querySelector(".reset-button").onclick = function(){
+    location.reload();
+}
 
 function buttonClickHandler(event) {
     // console.log('clicked', event.target.textContent)
@@ -50,7 +53,7 @@ function keyHandler(key){
     } else if (validyKeys.indexOf(key) > -1) {
         addLetter(key);
     } else {
-        console.log('invalid key')
+        // console.log('invalid key')
     }
 }
 
@@ -65,22 +68,31 @@ document.querySelector('body').onload = () => {
 }
 
 function addLetter(letter){
+    
     const square = document.getElementById('inputRow-' + startRow +'-square-' + startSquare)
+    console.log(square)
     if (inputWord[startRow].join('').length >= 5) {
         return;
     }
     square.textContent = letter
     inputWord[startRow][startSquare] = letter
     startSquare++
-    console.log(inputWord)
+    // console.log(inputWord)
 }
 
 function deleteLetter(){
+    // if (inputWord[startRow].join('').length >= 1) {
+    //     return;
+    // }
     startSquare--;
     // console.log(startSquare)
     const square = document.getElementById('inputRow-' + startRow +'-square-' + startSquare);
-    inputWord[startRow][startSquare] = ''
+    if (inputWord[startRow].join('').length <= 0) {
+        return;
+    }
     square.textContent = '';
+    inputWord[startRow][startSquare] = '';
+    
 }
 
 function checkInput(){
@@ -93,7 +105,7 @@ function checkInput(){
             if (input === wordle){
                     
                 setTimeout(() => {
-                    console.log('showWinMessage function called')
+                    // console.log('showWinMessage function called')
                     let winningSoundEffect = document.querySelector('.winning');
                     winningSoundEffect.play();
                     showWinMessage()
@@ -113,7 +125,7 @@ function checkInput(){
             }
         }
     } else {
-        alert('Invalid Word')
+        alert('Not in word list')
     }
 }
 
@@ -148,6 +160,7 @@ function changeKeyboardColor(keyLetter, color){
     key.classList.add(color)
 }
 
+
 function showWinMessage(){
     const winWindow = document.querySelector('#win-message');
     winWindow.style.display = 'block';
@@ -160,6 +173,9 @@ function showInvalidWordMessage(){
     const invalidWordWindow = document.querySelector('#invalid-word-message');
     invalidWordWindow.style.display = 'block';
 }
+
+
+
 // function showAlert(title, message) {
 //     var alertContainer = document.getElementById("alert-container");
 //     var alert = document.getElementById("alert");
