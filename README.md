@@ -5,7 +5,7 @@ This project is a recreation of the popular game [Wordle](https://en.wikipedia.o
 
 To check and play my version of Wordle go to this [link](https://renatakuroda.github.io/wordle-project/).
 
-![alt text](https://github.com/RenataKuroda/wordle-project/blob/a417f059efb69669f173bf92576ced214306f355/images/gamepage.png"my wordle game page")
+![Game Page](./images/gamepage.png "my wordle game page")
 
 
 --- 
