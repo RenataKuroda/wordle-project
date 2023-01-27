@@ -7,6 +7,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     </head>
     <body>
         
@@ -21,32 +24,18 @@
                 <h1 >Wordle Game</h1>
             </div>
             <div id="how-to-play">
-                <h3>How to play</h3>
-                <ul>
-                <li>The aim of Wordle is to guess the correct five-letter word.</li>
-                <li>Use the keyboard to select your letters.</li>
-                <li>Click "Enter" to submit your word.</li>
-                <li>If your letter doesn't change color, that letter is not part of your word.</li>
-                <li>If your letter turns yellow, you have the correct letter but in the wrong position.</li>
-                <li>If your letter turns green, it's correct!</li>
-                <li>You have 6 attempts to find the correct word.</li>
-                <li>Let's play!</li>
-                </ul>
+                <h3>
+                    <a href="./intructions.html" target="_blank"><img src="./images/artistic.png" alt="how to play"></a>
+                </h3>
+                
             </div>
-            <br>
             
-            <!-- <div id="alert-container"></div>
-            <div id="invalid-word-alert">
-                <h2 id="alert-title"></h2>
-                <p id="alert-message"></p>
-                <button id="alert-ok-button">OK</button>
-            </div> -->
-
+          
             <div id="window-message">
                 <div id="win-message">Congratulations!</div>
                 <div id="gameover-message">Game Over!</div>
             </div>    
-            <br>
+        
             <div class="input-container">
                 <div class="inputRow" id="inputRow-0">
                     <div class="square" id="inputRow-0-square-0"></div>
@@ -134,14 +123,14 @@
                  </div>
             </div>
             
-            <audio id="sound-effect" class="winning" src="crowd-cheer-ii-6263.mp3"></audio>
-            <audio id="sound-effect" class="gameover" src="wah-wah-sad-trombone-6347.mp3"></audio>
+            <audio id="sound-effect" class="winning" src="./sounds/crowd-cheer-ii-6263.mp3"></audio>
+            <audio id="sound-effect" class="gameover" src="./sounds/wah-wah-sad-trombone-6347.mp3"></audio>
     </div>
         
 
        
 
-        <script src="./script.js" async defer></script>
+        <script src="./script copy.js" async defer></script>
     </body>
 </html>
 
