@@ -1,30 +1,45 @@
-# Wordle - Project 1
-Project submission for GA flex course end of Unit 1
+# **Wordle Game**
+Project submission for [General Assembly](https://generalassemb.ly) Software Engineering Course flex mode (end of Unit 1), created only with Front-End Development. 
 
-To play the game go to this link https://renatakuroda.github.io/wordle-project/
+This project is a recreation of the popular game [Wordle](https://en.wikipedia.org/wiki/Wordle) created by Josh Wardle. 
+
+To check and play my version of Wordle go to this [link](https://renatakuroda.github.io/wordle-project/).
+
+![alt text](https://github.com/RenataKuroda/wordle-project/blob/a417f059efb69669f173bf92576ced214306f355/images/gamepage.png"my wordle game page")
+
+
+--- 
+
+### **Instructions**
 
 The aim of Wordle is to guess the correct five-letter word.
-Use the keyboard to select your letters.
-Click "Enter" to submit your word.
-If your letter doesn't change color, that letter is not part of your word.
-If your letter turns yellow, you have the correct letter but in the wrong position.
-If your letter turns green, it's correct!
-You have 6 attempts to find the correct word.
+1. Use the keyboard to select your letters.
+2. Click "Enter" to submit your word.
+3. If your letter turns grey, that letter is not part of your word.
+4. If your letter turns yellow, you have the correct letter but in the wrong position.
+5. If your letter turns green, it's correct!
+6. You have 6 attempts to find the correct word.
 
+---
+#### **The technical requirements for this project were:**
 
-Steps:
-1 - create HTML with the basic structure of the game
-2 - create JS to randomly get the words and check player inputs (score too?)
-3 - create CSS to style the page
+- Render a game in the browser
+- Include separate HTML / CSS / JavaScript files
+- Be playable as a game with multiple turns or attempts
+- Have logic for winning and losing the game (tell the player clearly when they win or lose, and stop the game)
+- Use Javascript for DOM manipulation
+- Deploy your game online, where the rest of the world can see it!
 
-Sound Effects downloaded from https://pixabay.com/
+---
+#### **Additional Features** 
 
+I have included these extra features:
+- Sound effects 
+- CSS animation
 
-I want to create a function to let the player know if the word is smaller than 5 letters
-Create a button to restart/play again
+---
+##### Resources:
 
-
-https://css3buttongenerator.com/
-used this to get the keyboard customisation
-
+* https://css3buttongenerator.com/ - keyboard customisation
+* https://pixabay.com/ - download sound effects
 
