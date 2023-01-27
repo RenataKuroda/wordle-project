@@ -92,7 +92,7 @@ function deleteLetter(){
         inputWord[startRow][startSquare] = '';
     
     }
-}
+
 
 function checkInput(){
     const input = inputWord[startRow].join('');
