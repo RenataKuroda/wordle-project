@@ -7,7 +7,7 @@ To check and play my version of Wordle go to this [link](https://renatakuroda.gi
 
 ![Game Page](./images/gamepage.png "my wordle game page")
 
-
+##### This page was made with HTML, JavaScript and CSS
 --- 
 
 ### **Instructions**
@@ -34,8 +34,9 @@ The aim of Wordle is to guess the correct five-letter word.
 ### **My step by step thoughts during project week**
 1. Create HTML with the basic structure of the game
 2. Create JS to randomly get the words and check player inputs
-3. create CSS to style the page
-
+3. Create CSS to style the page
+4. When game is working, spend time to QA (Quality Assurance)
+5. Make it fun with sounds for winning and losing
 
 ---
 #### **Additional Features** 
@@ -45,13 +46,14 @@ I have included these extra features:
 - CSS animation
 
 ---
-
 #### **Future Implementations**
 - Include score
 - Implement Local Storage
+- Include API for valid words from the dictionary instead of using an array of words
 ---
 ##### Resources:
 
 * https://css3buttongenerator.com/ - keyboard customisation
 * https://pixabay.com/ - download sound effects
+* https://coolors.co/ - for color palette ideas
 
