@@ -1,7 +1,7 @@
 # **Wordle Game**
 Project submission for [General Assembly](https://generalassemb.ly) Software Engineering Course flex mode (end of Unit 1), created only with Front-End Development. 
 
-This project is a recreation of the popular game [Wordle](https://en.wikipedia.org/wiki/Wordle) created by Josh Wardle. 
+This project is a recreation of the popular game [Wordle](https://www.nytimes.com/games/wordle/index.html) created by [Josh Wardle](https://en.wikipedia.org/wiki/Wordle). 
 
 To check and play my version of Wordle go to this [link](https://renatakuroda.github.io/wordle-project/).
 
@@ -31,12 +31,24 @@ The aim of Wordle is to guess the correct five-letter word.
 - Deploy your game online, where the rest of the world can see it!
 
 ---
+### **My step by step thoughts during project week**
+1. Create HTML with the basic structure of the game
+2. Create JS to randomly get the words and check player inputs
+3. create CSS to style the page
+
+
+---
 #### **Additional Features** 
 
 I have included these extra features:
-- Sound effects 
+- Sound effects - audio html tag
 - CSS animation
 
+---
+
+#### **Future Implementations**
+- Include score
+- Implement Local Storage
 ---
 ##### Resources:
 
