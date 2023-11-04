@@ -151,7 +151,7 @@ function changeColor(){
                 changeKeyboardColor(letter, 'yellow-overlay')
             } else {
                 square.classList.add('grey-overlay');
-                changeKeyboardColor(letter, 'black-overlay')
+                changeKeyboardColor(letter, 'grey-overlay')
             }
         }, 500 * i)
     }
