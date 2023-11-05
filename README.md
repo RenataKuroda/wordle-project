@@ -46,9 +46,6 @@ I have included these extra features:
 - CSS animation
 
 ---
-#### **Future Implementations**
-- Include API for valid words from the dictionary instead of using an array of words
----
 ##### Resources:
 
 * https://css3buttongenerator.com/ - keyboard customisation
