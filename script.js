@@ -134,6 +134,7 @@ function checkInput(){
                         let gameOverSoundEffect = document.querySelector('.gameover');
                         gameOverSoundEffect.play();
                         showGameOverMessage()
+                        showWordle()
                     }, 3000)
                 }
             }
@@ -190,3 +191,10 @@ function showInvalidWordMessage(){
     invalidWordWindow.style.display = 'block';
 }
 
+// Message to show Wordle when game is over
+function showWordle(){
+    const showWordleWindow = document.querySelector('#secret-wordle');
+    showWordleWindow.style.display = 'block';
+}
+const wordleElement = document.getElementById("wordle-variable");
+wordleElement.textContent = wordle;
