@@ -47,8 +47,6 @@ I have included these extra features:
 
 ---
 #### **Future Implementations**
-- Include score
-- Implement Local Storage
 - Include API for valid words from the dictionary instead of using an array of words
 ---
 ##### Resources:
